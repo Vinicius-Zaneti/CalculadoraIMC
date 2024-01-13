@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="Calculadora IMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo" tools:layout_editor_absoluteY="108dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="32sp" android:fontFamily="sans-serif-black"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_resultado"
+                android:visibility="invisible" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+                android:layout_marginTop="32dp" android:textSize="20sp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_classificacao"
+                android:visibility="invisible" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+                android:layout_marginTop="32dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_altura"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_classificacao" android:layout_marginTop="40dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_peso"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_altura" android:layout_marginTop="40dp"/>
+        <Button
+                android:text="CALCULAR"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content" android:id="@+id/btn_calcular"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_peso" android:layout_marginTop="32dp"
+                android:backgroundTint="#3C0AF1"/>
+        <TextView
+                android:text="Digite a Altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_altura"
+                app:layout_constraintStart_toStartOf="@+id/input_altura"
+                app:layout_constraintBottom_toTopOf="@+id/input_altura"/>
+        <TextView
+                android:text="Digite o Peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_peso"
+                app:layout_constraintBottom_toTopOf="@+id/input_peso"
+                app:layout_constraintStart_toStartOf="@+id/input_peso"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
